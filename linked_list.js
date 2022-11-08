@@ -79,7 +79,7 @@ class LinkedList {
         while(curr !== null){
             if(curr.element === element){
                 if(prev === null){
-                    this.head = null
+                    this.head = curr.next
                 }else{
                     prev.next = curr.next
                 }
@@ -91,13 +91,38 @@ class LinkedList {
         }
         return -1
     }
+
+    // searching a value
+    search(element){
+        let curr =  this.head
+        console.log(curr.element)
+        let it = 0 
+        while(curr !== null){
+            if(curr.element === element){
+                return it 
+            }
+            it++
+            curr = curr.next
+        }
+        return -1
+    }
+
+    traverse(){
+        let current = this.head
+        while(current){
+            console.log(current.element)
+            current = current.next
+        }
+    }
+
 }
 
 const linkedList = new LinkedList()
+
 linkedList.add(24)
 linkedList.add(33)
-linkedList.insertAtNode(53, 2)
-linkedList.removeElement(24)
+linkedList.add(77)
+linkedList.traverse()
 
 
-console.log(linkedList)
+
