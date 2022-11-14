@@ -56,6 +56,7 @@ class LinkedList {
     removeAtIndex(index){
         if(index < 0 || index >= this.size){
             console.log("Please enter a valid index")
+            return 
         }
         let prev, curr;
         curr = this.head
@@ -66,13 +67,15 @@ class LinkedList {
         }else{
             let it = 0
             while(it < index){
-                curr = curr.next
+                it++
                 prev = curr
+                curr = curr.next
             }
-            prev.next = current.next
+            prev.next = curr.next 
         }
         this.size--
     }
+    
     removeElement(element){
         let curr = this.head
         let prev = null;
@@ -104,8 +107,25 @@ class LinkedList {
             it++
             curr = curr.next
         }
-        return -1
+        return -1   
     }
+
+    elementAtIndex(index){
+        if(index < 0 || index >=this.size){
+            console.log("Enter valid Index")
+            return
+        }
+        let it = 0
+        let current = this.head
+        let prev = current
+        while(it < index){
+            it++
+            prev = current
+            current = current.next 
+        }
+        return current.element
+    } 
+
 
     traverse(){
         let current = this.head
@@ -117,12 +137,18 @@ class LinkedList {
 
 }
 
-const linkedList = new LinkedList()
+module.exports = {
+    LinkedList
+}
 
-linkedList.add(24)
-linkedList.add(33)
-linkedList.add(77)
-linkedList.traverse()
+// const linkedList = new LinkedList()
 
+
+// linkedList.add(24)
+// linkedList.add(33)
+// linkedList.add(77)
+// linkedList.removeAtIndex(2)
+// linkedList.add(44)
+// console.log(linkedList)
 
 

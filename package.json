@@ -1,0 +1,20 @@
+{
+  "name": "data_structures",
+  "version": "1.0.0",
+  "description": "Data structure practice files",
+  "main": "DoubleLinkedList.js",
+  "scripts": {
+    "test": ""
+  },
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaif987/Data_Structures_and_Algorithms.git"
+  },
+  "author": "Mohammad Kaif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaif987/Data_Structures_and_Algorithms/issues"
+  },
+  "homepage": "https://github.com/Kaif987/Data_Structures_and_Algorithms#readme"
+}
